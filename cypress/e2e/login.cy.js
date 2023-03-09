@@ -1,0 +1,68 @@
+describe('Login tests', () => {
+    beforeEach(() => {
+        cy.visit('https://www.automationexercise.com/')
+    })
+
+    it('Register User', () =>{
+        cy.contains('Signup / Login').click()
+        cy.contains('New User Signup!')
+        cy.get('[data-qa="signup-name"]').type(`${'bob'}`)
+        cy.get('[data-qa="signup-email"]').type(`${'testemail1@gmail.com'}`)
+        cy.get('[data-qa="signup-button"]').click()
+        cy.get('[data-qa="password"]').type(`${'1234'}`)
+        cy.get('[data-qa="first_name"]').type(`${'bob'}`)
+        cy.get('[data-qa="last_name"]').type(`${'bee'}`)
+        cy.get('[data-qa="address"]').type(`${'test address'}`)
+        cy.get('[data-qa="country"]').select(1)
+        cy.get('[data-qa="state"]').type(`${'CA'}`)
+        cy.get('[data-qa="city"]').type(`${'test city'}`)
+        cy.get('[data-qa="zipcode"]').type(`${'123456'}`)
+        cy.get('[data-qa="mobile_number"]').type(`${'0987654321'}`)
+        cy.get('[data-qa="create-account"]').click()
+        cy.get('[data-qa="account-created"]')
+        cy.get('[data-qa="continue-button"]').click()
+        cy.contains('Logged in as bob')
+        cy.contains('Delete Account').click()
+        cy.get('[data-qa="account-deleted"]')
+        cy.get('[data-qa="continue-button"]').click()
+    }) 
+
+    it('Login User', () =>{
+        cy.contains('Signup / Login').click()
+        cy.contains('Login to your account')
+        cy.get('[data-qa="login-email"]').type(`${'testemail2@gmail.com'}`)
+        cy.get('[data-qa="login-password"]').type(`${'test'}`)
+        cy.get('[data-qa="login-button"]').click()
+        cy.contains('Logged in as bobby').should('contain', 'Logged in as bobby')
+        cy.contains('Logout').click()
+    }) 
+
+    it('Login User Wrong Info', () =>{
+        cy.contains('Signup / Login').click()
+        cy.contains('Login to your account')
+        cy.get('[data-qa="login-email"]').type(`${'asdfdgdrs@gmail.com'}`)
+        cy.get('[data-qa="login-password"]').type(`${'sertgfd'}`)
+        cy.get('[data-qa="login-button"]').click()
+        cy.contains('Your email or password is incorrect!').should('contain', 'Your email or password is incorrect!')
+    }) 
+
+    it('Logout User', () =>{
+        cy.contains('Signup / Login').click()
+        cy.contains('Login to your account')
+        cy.get('[data-qa="login-email"]').type(`${'testemail2@gmail.com'}`)
+        cy.get('[data-qa="login-password"]').type(`${'test'}`)
+        cy.get('[data-qa="login-button"]').click()
+        cy.contains('Logged in as bobby')
+        cy.contains('Logout').click()
+        cy.contains('New User Signup!').should('contain', 'New User Signup!')
+    })  
+
+    it('Register Already Existing User', () =>{
+        cy.contains('Signup / Login').click()
+        cy.contains('New User Signup!')
+        cy.get('[data-qa="signup-name"]').type(`${'bobby'}`)
+        cy.get('[data-qa="signup-email"]').type(`${'testemail2@gmail.com'}`)
+        cy.get('[data-qa="signup-button"]').click()
+        cy.contains('Email Address already exist!').should('contain', 'Email Address already exist!')
+    })
+})
