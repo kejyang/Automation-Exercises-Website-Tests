@@ -32,7 +32,46 @@ button.
 Test Cases
 ----
 
-Login/Signup
+Shopping Cart Functions
+----
+
+__Add Products to Cart__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click 'Products' button
+5. Hover over first product and click 'Add to cart'
+6. Click 'Continue Shopping' button
+7. Hover over second product and click 'Add to cart'
+8. Click 'View Cart' button
+9. Verify both products are added to Cart
+10. Verify their prices, quantity and total price
+
+__Verify Quantity in Cart__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click 'View Product' for any product on home page
+5. Verify product detail is opened
+6. Increase quantity to 4
+7. Click 'Add to cart' button
+8. Click 'View Cart' button
+9. Verify that product is displayed in cart page with exact quantity
+
+__Remove Products in Cart__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Add products to cart
+5. Click 'Cart' button
+6. Verify that cart page is displayed
+7. Click 'X' button corresponding to particular product
+8. Verify that product is removed from the cart
+
+Login/Signup Functions
 ----
 __Register User__
 
