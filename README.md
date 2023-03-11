@@ -9,7 +9,7 @@ Set Up
 __Setting Up the End to End tests__ 
 
 1. Clone the repository
-2. Using the terminal go into the root of the project and run npx cypress open
+2. Using a terminal go into the root of the project and run npx cypress open
 3. This window should pop up. Click E2E Testing
  ![image](https://user-images.githubusercontent.com/38774593/224465326-0f03f77c-5a4a-425d-8f0a-46a9a8034ceb.png)
 4. Pick the preferred browser. 
