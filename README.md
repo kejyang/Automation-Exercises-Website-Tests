@@ -8,7 +8,7 @@ Set Up
 
 __Setting Up the End to End tests__ 
 
-1. Clone the respository into a folder
+1. Clone the respository
 2. Using a terminal go into the repository and run npm init and then npm install cypress --save-dev
 3. Then run npm run cypress:open
 4. This window should pop up. Click E2E Testing
