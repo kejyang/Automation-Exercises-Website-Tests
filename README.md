@@ -8,7 +8,7 @@ Set Up
 
 __Setting Up the End to End tests__ 
 
-1. Clone the respository
+1. Clone the repository
 2. Using a terminal go into the root of the cloned repository and run npm init 
 3. Run npm install cypress --save-dev
 4. In the terminal run npm run cypress:open 
