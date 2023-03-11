@@ -9,13 +9,11 @@ Set Up
 __Setting Up the End to End tests__ 
 
 1. Clone the repository
-2. Using a terminal go into the root of the cloned repository and run npm init -y
-3. Run npm install cypress --save-dev
-4. In the terminal run npm run cypress:open 
-5. This window should pop up. Click E2E Testing
+2. In the terminal run npx cypress open
+3. This window should pop up. Click E2E Testing
  ![image](https://user-images.githubusercontent.com/38774593/224465326-0f03f77c-5a4a-425d-8f0a-46a9a8034ceb.png)
-6. Pick the preferred browser. 
-7. Select any of the test suites under the cypress/e2e folder to run the test cases related to the feature.
+4. Pick the preferred browser. 
+5. Select any of the test suites under the cypress/e2e folder to run the test cases related to the feature.
  ![image](https://user-images.githubusercontent.com/38774593/224465726-b948acf0-187c-4a18-9270-ab5b72c539fe.png)
 
 
