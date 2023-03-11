@@ -145,6 +145,77 @@ __Register User with existing email__
 8. Verify error 'Email Address already exist!' is visible
 
 
+Different Page Verifications
+----
+
+__Contact Us Form__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click on 'Contact Us' button
+5. Verify 'GET IN TOUCH' is visible
+6. Enter name, email, subject and message
+7. Upload file
+8. Click 'Submit' button
+9. Click OK button
+10. Verify success message 'Success! Your details have been submitted successfully.' is visible
+11. Click 'Home' button and verify that landed to home page successfully
+
+__Verify All Products and Product detail page__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click on 'Products' button
+5. Verify user is navigated to ALL PRODUCTS page successfully
+6. The products list is visible
+7. Click on 'View Product' of first product
+8. User is landed to product detail page
+9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
+
+__Verify Search__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click on 'Products' button
+5. Verify user is navigated to ALL PRODUCTS page successfully
+6. Enter product name in search input and click search button
+7. Verify 'SEARCHED PRODUCTS' is visible
+8. Verify all the products related to search are visible
+
+__Verify Subscription in Home Page__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Scroll down to footer
+5. Verify text 'SUBSCRIPTION'
+6. Enter email address in input and click arrow button
+7. Verify success message 'You have been successfully subscribed!' is visible
+
+__Verify Subscription in Cart__
+
+1. Launch browser
+2. Navigate to url 'http://automationexercise.com'
+3. Verify that home page is visible successfully
+4. Click 'Cart' button
+5. Scroll down to footer
+6. Verify text 'SUBSCRIPTION'
+7. Enter email address in input and click arrow button
+8. Verify success message 'You have been successfully subscribed!' is visible
+
+
+
+
+
+
+
+
+
+
+
 
 
 
