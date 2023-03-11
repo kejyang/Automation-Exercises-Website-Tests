@@ -14,8 +14,9 @@ __Setting Up the End to End tests__
 4. This window should pop up. Click E2E Testing
  ![image](https://user-images.githubusercontent.com/38774593/224465326-0f03f77c-5a4a-425d-8f0a-46a9a8034ceb.png)
 5. Pick the preferred browser. 
-6. ![image](https://user-images.githubusercontent.com/38774593/224465726-b948acf0-187c-4a18-9270-ab5b72c539fe.png)
-Select any of the test suites under the cypress/e2e folder to run the test cases related to the feature.
+6. Select any of the test suites under the cypress/e2e folder to run the test cases related to the feature.
+ ![image](https://user-images.githubusercontent.com/38774593/224465726-b948acf0-187c-4a18-9270-ab5b72c539fe.png)
+
 
 __Setting Up API tests__ 
 
