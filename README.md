@@ -24,10 +24,10 @@ __Setting Up API tests__
 1. 
 
 
-End to End Tests
+About the End to End Tests
 ----
 
-The End to End tests follow the POM design pattern. There is a page folder that has classes that have methods that allow you to get or manipulate the ui objects
+The End to End tests follow the POM design pattern. There is a page folder that has classes that have methods that allows the user to get or manipulate the ui objects
 of that page. For example the login.jy page has methods that allow the user to input text into the the designated areas and also allows the user to push the login
 button.
 
