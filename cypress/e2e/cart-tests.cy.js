@@ -1,24 +1,46 @@
+import Navbar from "../pages/navbar"
+import Products from "../pages/products"
+import ProductPage from "../pages/productPage"
+import Cart from "../pages/cart"
+
+const navbar = new Navbar()
+const products = new Products()
+const productPage = new ProductPage()
+const cart = new Cart()
+
 describe('Login tests', () => {
     beforeEach(() => {
         cy.visit('https://www.automationexercise.com/')
     })
 
-    /* it('Add item to cart', () =>{
-        cy.contains('Products').click()
-        cy.get('div.col-sm-4:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(4)').click()
+    it('Add item to cart', () =>{
+        navbar.getProductsLink().click()
+        products.addFirstProductToCart()
         cy.get('.close-modal').click()
-        cy.get('div.col-sm-4:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(4)').click()
+        products.addSecondProductToCart()
         cy.get('.close-modal').click()
-        cy.contains('Cart').click()
+        navbar.getCartLink().click()
         cy.contains('Blue Top')
         cy.contains('Men Tshirt').should('contain', 'Men Tshirt')
-    })  */
+    })   
 
     it('Verify quantity in cart', () =>{
-        cy.contains('Products').click()
-        cy.get('div.col-sm-4:nth-child(3) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)').click()
-        cy.get('#quantity').clear()
-        cy.get('#quantity').type(`${'4'}`)
-        cy.get('#quantity').should('have.value', '4')
+        navbar.getProductsLink().click()
+        products.getFirstProductLink().click()
+        productPage.getQuantityElement().clear()
+        productPage.getQuantityElement().type(`${'4'}`)
+        productPage.getAddToCartButton().click()
+        cy.get('.close-modal').click()
+        navbar.getCartLink().click()
+        cart.getFirstProductQuantity().should('contain', '4')
     }) 
+
+    it('Remove item in cart', () =>{
+        navbar.getProductsLink().click()
+        products.addFirstProductToCart()
+        cy.get('.close-modal').click()
+        navbar.getCartLink().click()
+        cart.removeFirstProduct()
+        cy.contains('Blue Top').should('not.exist')
+    })   
 })
