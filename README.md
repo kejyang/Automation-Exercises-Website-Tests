@@ -17,11 +17,6 @@ __Setting Up the End to End tests__
  ![image](https://user-images.githubusercontent.com/38774593/224465726-b948acf0-187c-4a18-9270-ab5b72c539fe.png)
 
 
-__Setting Up API tests__ 
-
-1. 
-
-
 About the End to End Tests
 ----
 
